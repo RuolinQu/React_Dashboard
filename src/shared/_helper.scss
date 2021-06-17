@@ -1,5 +1,5 @@
 @function px($n) {
-  @return $n / 2420 * 100vw;
+  @return $n / 2420 * 100rem;
 }
 $blue: #002866;
 $font-hei: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
