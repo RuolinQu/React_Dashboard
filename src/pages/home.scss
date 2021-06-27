@@ -4,6 +4,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  background: #010310;
   header {
     height: px(99);
     background-size: cover;
@@ -12,29 +13,46 @@
   main {
     flex: 1;
     display: grid;
+    padding-top: px(30);
     grid-template:
       "box1 box2 box4 box5" 755fr
       "box3 box3 box4 box5" 363fr/ 366fr 361fr 811fr 747fr;
+    grid-row-gap: px(28);
+    grid-column-gap: px(28);
+
+    section {
+      border: 1px solid #0f3362;
+      border-radius: 4px;
+      background: #0c1139;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 4px;
+        box-shadow: 17px 0 0 -16px #0e325f, -17px 0 0 -16px #0e325f,
+          0 17px 0 -16px #0e325f, 0 -17px 0 -16px #0e325f, 9px 0 0 -8px #0d4483,
+          -9px 0 0 -8px #0d4483, 0 9px 0 -8px #0d4483, 0 -9px 0 -8px #0d4483;
+      }
+    }
 
     .section1 {
       grid-area: box1;
-      background: lightblue;
     }
     .section2 {
       grid-area: box2;
-      background: lightcoral;
     }
     .section3 {
       grid-area: box3;
-      background: lightgray;
     }
     .section4 {
       grid-area: box4;
-      background: lightyellow;
     }
     .section5 {
       grid-area: box5;
-      background: lightsalmon;
     }
   }
 }
